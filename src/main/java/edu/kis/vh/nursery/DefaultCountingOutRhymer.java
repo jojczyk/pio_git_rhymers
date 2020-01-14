@@ -6,7 +6,7 @@ public class DefaultCountingOutRhymer {
 	private static final int[] NUMBERS = new int[MAX_SIZE];
 	
 
-    public int total = -1;
+    private int total = -1;
 
     public void countIn(int in) {
         if (!isFull())
@@ -31,6 +31,10 @@ public class DefaultCountingOutRhymer {
         if (callCheck())
             return -1;
         return NUMBERS[total--];
+    }
+
+    public int getTotal() {
+        return total;
     }
 
 }
